@@ -10,7 +10,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
@@ -60,10 +59,11 @@ function App() {
         <Navbar title='My App' mode={mode} toggleMode={toggleMode} defaultTheme={defaultTheme} greenTheme={greenTheme} />
         <Alert alert={alert} />
         <div className="container">
+          {/* <TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert} /> */}
           <Routes>
-            <Route path="/about" element={<About />}>
+            <Route path="/about" element={<About mode={mode} />}>
             </Route>
-            <Route path="/" element={<TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert} />}>
+            <Route path="/" element={<TextForm heading="Try My App - Text Converter" mode={mode} showAlert={showAlert} />}>
             </Route>
           </Routes>
         </div>
